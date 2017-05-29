@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">SoundTrack</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="category1">List</string>
+    <string name="category2">Favorite</string>
+    <string name="artist">Artist\nSong</string>
+    <string name="text_1">
+        The idea is to make the music app for soundtracks from movies, cartoons etc.
+        \nMain page - one of two fragments.
+        \nHere are 4 main categories  - clickable ImageViews, with the usage of explicit intent.
+    </string>
+    <string name="text_2">
+        In this Fragment user will have only favorite songs.
+        By clicking on the heart button in the music player, the song will be stored here.
+    </string>
+    <string name="text_3">
+        ListView is used for page with list of items of chosen category.
+        Inside this list all the items are clickable.
+        \nOn the next page there is the ListView of all the songs that are belongs to the film/series/cartoon/anime.
+        \nBoth activities have the backup navigation.
+        \nThe Search will be implemented inside the app, so user can find a song, an artist or a particular film.
+    </string>
+     <string name="text_4">
+         For implementing MediaPlayer ExoPlayer library is needed.\n
+         Here is the cover image or image by default.\n
+         Pause, start, forward, back buttons will be implemented.\n
+         On the bottom will be a button that open a menu with songs from the category, favorite button and shuffle.
+    </string>
+    <string name="title_search">search</string>
+    <string name="searchHere">Search SoundTrack</string>
+</resources>
