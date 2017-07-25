@@ -29,4 +29,53 @@
     </string>
     <string name="title_search">search</string>
     <string name="searchHere">Search SoundTrack</string>
+    <string name="anime_name_1">Naruto Shippuden</string>
+    <string name="anime_name_2">Attack on Titan</string>
+    <string name="anime_name_3">Sword Art Online</string>
+    <string name="anime_name_4">Fairy Tail</string>
+    <string name="anime_name_5">Code Geass</string>
+    <string name="anime_name_6">One Piece</string>
+    <string name="anime_name_7">Fullmetal Alchemist</string>
+    <string name="anime_name_8">Tokyo Ghoul</string>
+    <string name="anime_name_9">Blue Exorcist</string>
+    <string name="anime_name_10">No Game No Life</string>
+    <string name="anime_name_11">Rurouni Kenshin</string>
+
+    <string name="cartoon_name_1">Zootopia</string>
+    <string name="cartoon_name_2">Waltz with Bashir</string>
+    <string name="cartoon_name_3">Song Of The Sea</string>
+    <string name="cartoon_name_4">Moana</string>
+    <string name="cartoon_name_5">Finding Nemo</string>
+    <string name="cartoon_name_6">The LEGO Movie</string>
+    <string name="cartoon_name_7">The Little Mermaid</string>
+    <string name="cartoon_name_8">The Little Prince</string>
+    <string name="cartoon_name_9">Kung Fu Panda 3</string>
+    <string name="cartoon_name_10">Mulan</string>
+    <string name="cartoon_name_11">The Princess and the Frog</string>
+
+    <string name="movies_name_1">Forrest Gump</string>
+    <string name="movies_name_2">The Matrix</string>
+    <string name="movies_name_3">Titanic</string>
+    <string name="movies_name_4">Avatar</string>
+    <string name="movies_name_5">Léon: The Professional</string>
+    <string name="movies_name_6">Catch Me If You Can</string>
+    <string name="movies_name_7">Beauty And The Beast</string>
+    <string name="movies_name_8">Ghost In The Shell</string>
+    <string name="movies_name_9">Tulip Fever</string>
+    <string name="movies_name_10">Justice League</string>
+    <string name="movies_name_11">Spider-Man: Homecoming</string>
+
+    <string name="series_name_1">Doctor Who</string>
+    <string name="series_name_2">Star Trek</string>
+    <string name="series_name_3">Sherlock</string>
+    <string name="series_name_4">Twin Peaks</string>
+    <string name="series_name_5">Lost</string>
+    <string name="series_name_6">The X-Files</string>
+    <string name="series_name_7">Game Of Thrones</string>
+    <string name="series_name_8">Friends</string>
+    <string name="series_name_9">The Simpsons</string>
+    <string name="series_name_10">The Wire</string>
+    <string name="series_name_11">Breaking Bad</string>
+
+    <string name="artist_song">Artist\nSong</string>
 </resources>

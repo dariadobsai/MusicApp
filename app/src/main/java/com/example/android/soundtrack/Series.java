@@ -1,9 +1,9 @@
 package com.example.android.soundtrack;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
@@ -18,8 +18,8 @@ public class Series extends AppCompatActivity implements SearchView.OnQueryTextL
     Toolbar toolbar;
     Intent myIntent;
     Items_Adapter adapter;
-    private ListView listView;
     SearchView search;
+    private ListView listView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,8 +34,6 @@ public class Series extends AppCompatActivity implements SearchView.OnQueryTextL
         if (getSupportActionBar() != null) {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
             getSupportActionBar().setDisplayShowHomeEnabled(true);
-
-
         }
 
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
@@ -46,24 +44,21 @@ public class Series extends AppCompatActivity implements SearchView.OnQueryTextL
         });
 
         final ArrayList<SongsOrder> orders = new ArrayList<>();
-        orders.add(new SongsOrder(R.drawable.series, "Doctor Who"));
-        orders.add(new SongsOrder(R.drawable.series, "Star Trek"));
-        orders.add(new SongsOrder(R.drawable.series, "Sherlock"));
-        orders.add(new SongsOrder(R.drawable.series, "Twin Peaks"));
-        orders.add(new SongsOrder(R.drawable.series, "Lost"));
-        orders.add(new SongsOrder(R.drawable.series, "The X-Files"));
-        orders.add(new SongsOrder(R.drawable.series, "Game Of Thrones"));
-        orders.add(new SongsOrder(R.drawable.series, "Friends"));
-        orders.add(new SongsOrder(R.drawable.series, "The Simpsons"));
-        orders.add(new SongsOrder(R.drawable.series, "The Wire"));
-        orders.add(new SongsOrder(R.drawable.series, "Breaking Bad"));
-
+        orders.add(new SongsOrder(R.drawable.series, R.string.series_name_1));
+        orders.add(new SongsOrder(R.drawable.series, R.string.series_name_2));
+        orders.add(new SongsOrder(R.drawable.series, R.string.series_name_3));
+        orders.add(new SongsOrder(R.drawable.series, R.string.series_name_4));
+        orders.add(new SongsOrder(R.drawable.series, R.string.series_name_5));
+        orders.add(new SongsOrder(R.drawable.series, R.string.series_name_6));
+        orders.add(new SongsOrder(R.drawable.series, R.string.series_name_7));
+        orders.add(new SongsOrder(R.drawable.series, R.string.series_name_8));
+        orders.add(new SongsOrder(R.drawable.series, R.string.series_name_9));
+        orders.add(new SongsOrder(R.drawable.series, R.string.series_name_10));
+        orders.add(new SongsOrder(R.drawable.series, R.string.series_name_11));
 
         adapter = new Items_Adapter(this, orders);
 
-
         listView = (ListView) findViewById(R.id.list_categories);
-
 
         listView.setAdapter(adapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -72,15 +67,12 @@ public class Series extends AppCompatActivity implements SearchView.OnQueryTextL
                 listView.getItemAtPosition(position);
                 myIntent = new Intent(Series.this, Music_listen.class);
                 startActivity(myIntent);
-
             }
         });
     }
 
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-
 
         getMenuInflater().inflate(R.menu.main_menu, menu);
 
@@ -99,5 +91,4 @@ public class Series extends AppCompatActivity implements SearchView.OnQueryTextL
     public boolean onQueryTextChange(String newText) {
         return false;
     }
-
 }

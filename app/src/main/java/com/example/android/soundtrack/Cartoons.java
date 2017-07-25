@@ -1,10 +1,9 @@
 package com.example.android.soundtrack;
 
-
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
@@ -13,7 +12,6 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 
 import java.util.ArrayList;
-
 
 public class Cartoons extends AppCompatActivity implements SearchView.OnQueryTextListener {
 
@@ -35,8 +33,6 @@ public class Cartoons extends AppCompatActivity implements SearchView.OnQueryTex
         if (getSupportActionBar() != null) {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
             getSupportActionBar().setDisplayShowHomeEnabled(true);
-
-
         }
 
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
@@ -47,18 +43,17 @@ public class Cartoons extends AppCompatActivity implements SearchView.OnQueryTex
         });
 
         final ArrayList<SongsOrder> orders = new ArrayList<>();
-        orders.add(new SongsOrder(R.drawable.cartoons, "Zootopia"));
-        orders.add(new SongsOrder(R.drawable.cartoons, "Waltz with Bashir"));
-        orders.add(new SongsOrder(R.drawable.cartoons, "Song Of The Sea"));
-        orders.add(new SongsOrder(R.drawable.cartoons, "Moana"));
-        orders.add(new SongsOrder(R.drawable.cartoons, "Finding Nemo"));
-        orders.add(new SongsOrder(R.drawable.cartoons, "The LEGO Movie"));
-        orders.add(new SongsOrder(R.drawable.cartoons, "The Little Mermaid"));
-        orders.add(new SongsOrder(R.drawable.cartoons, "The Little Prince"));
-        orders.add(new SongsOrder(R.drawable.cartoons, "Kung Fu Panda 3"));
-        orders.add(new SongsOrder(R.drawable.cartoons, "Mulan"));
-        orders.add(new SongsOrder(R.drawable.cartoons, "The Princess and the Frog"));
-
+        orders.add(new SongsOrder(R.drawable.cartoons, R.string.cartoon_name_1));
+        orders.add(new SongsOrder(R.drawable.cartoons, R.string.cartoon_name_2));
+        orders.add(new SongsOrder(R.drawable.cartoons, R.string.cartoon_name_3));
+        orders.add(new SongsOrder(R.drawable.cartoons, R.string.cartoon_name_4));
+        orders.add(new SongsOrder(R.drawable.cartoons, R.string.cartoon_name_5));
+        orders.add(new SongsOrder(R.drawable.cartoons, R.string.cartoon_name_6));
+        orders.add(new SongsOrder(R.drawable.cartoons, R.string.cartoon_name_7));
+        orders.add(new SongsOrder(R.drawable.cartoons, R.string.cartoon_name_8));
+        orders.add(new SongsOrder(R.drawable.cartoons, R.string.cartoon_name_9));
+        orders.add(new SongsOrder(R.drawable.cartoons, R.string.cartoon_name_10));
+        orders.add(new SongsOrder(R.drawable.cartoons, R.string.cartoon_name_11));
 
         adapter = new Items_Adapter(this, orders);
 
@@ -71,7 +66,6 @@ public class Cartoons extends AppCompatActivity implements SearchView.OnQueryTex
                 listView.getItemAtPosition(position);
                 myIntent = new Intent(Cartoons.this, Music_listen.class);
                 startActivity(myIntent);
-
             }
         });
     }
@@ -84,7 +78,6 @@ public class Cartoons extends AppCompatActivity implements SearchView.OnQueryTex
         search = (SearchView) MenuItemCompat.getActionView(menu.findItem(R.id.action_search));
         search.setOnQueryTextListener(this);
         return super.onCreateOptionsMenu(menu);
-
     }
 
     @Override

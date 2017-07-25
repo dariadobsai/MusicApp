@@ -1,25 +1,20 @@
 package com.example.android.soundtrack;
 
-
 class SongsOrder {
 
     private int ImageId;
+    private int Name;
 
-    private String Name;
-
-
-    SongsOrder(int imageId, String name) {
+    SongsOrder(int imageId, int name) {
         this.ImageId = imageId;
         this.Name = name;
     }
-
 
     int putTheImage() {
         return ImageId;
     }
 
-    String putTheTitle() {
+    int putTheTitle() {
         return Name;
     }
-
 }

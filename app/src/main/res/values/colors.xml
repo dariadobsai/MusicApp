@@ -11,4 +11,5 @@
     <color name="txt_1">#EFEEF3</color>
     <color name="txt_2">#3C3C3C</color>
     <color name="not_active">#BDBDBD</color>
+    <color name="color_for_player">#880E4F</color>
 </resources>

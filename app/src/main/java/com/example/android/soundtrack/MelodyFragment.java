@@ -1,6 +1,5 @@
 package com.example.android.soundtrack;
 
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -8,7 +7,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-
 
 public class MelodyFragment extends Fragment {
 
@@ -28,7 +26,6 @@ public class MelodyFragment extends Fragment {
                              Bundle savedInstanceState) {
 
         // Inflate the layout for this fragment
-
         view = inflater.inflate(R.layout.fragment_melody, container, false);
         movie = (ImageView) view.findViewById(R.id.movies);
         cartoon = (ImageView) view.findViewById(R.id.cartoons);

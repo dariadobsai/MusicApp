@@ -13,7 +13,6 @@ import android.widget.ListView;
 
 import java.util.ArrayList;
 
-
 public class Music_listen extends AppCompatActivity implements SearchView.OnQueryTextListener {
 
     Toolbar toolbar;
@@ -43,20 +42,18 @@ public class Music_listen extends AppCompatActivity implements SearchView.OnQuer
             }
         });
 
-
         final ArrayList<SongsOrder> orders = new ArrayList<>();
-        orders.add(new SongsOrder(R.drawable.notes, "Artist\nSong"));
-        orders.add(new SongsOrder(R.drawable.notes, "Artist\nSong"));
-        orders.add(new SongsOrder(R.drawable.notes, "Artist\nSong"));
-        orders.add(new SongsOrder(R.drawable.notes, "Artist\nSong"));
-        orders.add(new SongsOrder(R.drawable.notes, "Artist\nSong"));
-        orders.add(new SongsOrder(R.drawable.notes, "Artist\nSong"));
-        orders.add(new SongsOrder(R.drawable.notes, "Artist\nSong"));
-        orders.add(new SongsOrder(R.drawable.notes, "Artist\nSong"));
-        orders.add(new SongsOrder(R.drawable.notes, "Artist\nSong"));
-        orders.add(new SongsOrder(R.drawable.notes, "Artist\nSong"));
-        orders.add(new SongsOrder(R.drawable.notes, "Artist\nSong"));
-
+        orders.add(new SongsOrder(R.drawable.notes, R.string.artist_song));
+        orders.add(new SongsOrder(R.drawable.notes, R.string.artist_song));
+        orders.add(new SongsOrder(R.drawable.notes, R.string.artist_song));
+        orders.add(new SongsOrder(R.drawable.notes, R.string.artist_song));
+        orders.add(new SongsOrder(R.drawable.notes, R.string.artist_song));
+        orders.add(new SongsOrder(R.drawable.notes, R.string.artist_song));
+        orders.add(new SongsOrder(R.drawable.notes, R.string.artist_song));
+        orders.add(new SongsOrder(R.drawable.notes, R.string.artist_song));
+        orders.add(new SongsOrder(R.drawable.notes, R.string.artist_song));
+        orders.add(new SongsOrder(R.drawable.notes, R.string.artist_song));
+        orders.add(new SongsOrder(R.drawable.notes, R.string.artist_song));
 
         adapter = new Music_Adapter(this, orders);
 
@@ -70,7 +67,6 @@ public class Music_listen extends AppCompatActivity implements SearchView.OnQuer
                 listView.getItemAtPosition(position);
                 myIntent = new Intent(Music_listen.this, Player.class);
                 startActivity(myIntent);
-
             }
         });
     }
@@ -84,7 +80,6 @@ public class Music_listen extends AppCompatActivity implements SearchView.OnQuer
         search = (SearchView) MenuItemCompat.getActionView(menu.findItem(R.id.action_search));
         search.setOnQueryTextListener(this);
         return super.onCreateOptionsMenu(menu);
-
     }
 
     @Override

@@ -11,7 +11,6 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-
 class Music_Adapter extends ArrayAdapter<SongsOrder> {
 
     Music_Adapter(Context context, ArrayList<SongsOrder> items) {
@@ -28,20 +27,18 @@ class Music_Adapter extends ArrayAdapter<SongsOrder> {
                     R.layout.music_list, parent, false);
         }
 
-
         // Get the SongOrder object located at this position in the list
-
         SongsOrder ThisItem = getItem(position);
 
         assert ThisItem != null;
         TextView TitleText = (TextView) listItemView.findViewById(R.id.Artist);
+
         // Get the Artist and SongName from the current song object and set this list
         TitleText.setText(ThisItem.putTheTitle());
 
         ImageView imageView = (ImageView) listItemView.findViewById(R.id.trackPic);
 
         // Get the current song
-
         imageView.setImageResource(ThisItem.putTheImage());
 
         // Return the whole list item layout (containing 1 TextView and 1 ImageView) to show it in the ListView

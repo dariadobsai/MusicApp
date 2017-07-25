@@ -5,14 +5,11 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
-
-
-class PagerAdapter extends FragmentPagerAdapter{
+class PagerAdapter extends FragmentPagerAdapter {
 
     PagerAdapter(FragmentManager fm, Context context) {
         super(fm);
     }
-
 
     // Assign the number of fragments
     @Override
@@ -29,5 +26,4 @@ class PagerAdapter extends FragmentPagerAdapter{
             return new FavoriteFragment();
         }
     }
-
 }

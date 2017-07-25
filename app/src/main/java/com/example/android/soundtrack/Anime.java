@@ -1,9 +1,9 @@
 package com.example.android.soundtrack;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
@@ -12,7 +12,6 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 
 import java.util.ArrayList;
-
 
 public class Anime extends AppCompatActivity implements SearchView.OnQueryTextListener {
 
@@ -30,12 +29,9 @@ public class Anime extends AppCompatActivity implements SearchView.OnQueryTextLi
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-
         if (getSupportActionBar() != null) {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
             getSupportActionBar().setDisplayShowHomeEnabled(true);
-
-
         }
 
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
@@ -46,18 +42,17 @@ public class Anime extends AppCompatActivity implements SearchView.OnQueryTextLi
         });
 
         final ArrayList<SongsOrder> orders = new ArrayList<>();
-        orders.add(new SongsOrder(R.drawable.anime, "Naruto Shippuden"));
-        orders.add(new SongsOrder(R.drawable.anime, "Attack on Titan"));
-        orders.add(new SongsOrder(R.drawable.anime, "Sword Art Online"));
-        orders.add(new SongsOrder(R.drawable.anime, "Fairy Tail"));
-        orders.add(new SongsOrder(R.drawable.anime, "Code Geass"));
-        orders.add(new SongsOrder(R.drawable.anime, "One Piece"));
-        orders.add(new SongsOrder(R.drawable.anime, "Fullmetal Alchemist"));
-        orders.add(new SongsOrder(R.drawable.anime, "Tokyo Ghoul"));
-        orders.add(new SongsOrder(R.drawable.anime, "Blue Exorcist"));
-        orders.add(new SongsOrder(R.drawable.anime, "No Game No Life"));
-        orders.add(new SongsOrder(R.drawable.anime, "Rurouni Kenshin"));
-
+        orders.add(new SongsOrder(R.drawable.anime, R.string.anime_name_1));
+        orders.add(new SongsOrder(R.drawable.anime, R.string.anime_name_2));
+        orders.add(new SongsOrder(R.drawable.anime, R.string.anime_name_3));
+        orders.add(new SongsOrder(R.drawable.anime, R.string.anime_name_4));
+        orders.add(new SongsOrder(R.drawable.anime, R.string.anime_name_5));
+        orders.add(new SongsOrder(R.drawable.anime, R.string.anime_name_6));
+        orders.add(new SongsOrder(R.drawable.anime, R.string.anime_name_7));
+        orders.add(new SongsOrder(R.drawable.anime, R.string.anime_name_8));
+        orders.add(new SongsOrder(R.drawable.anime, R.string.anime_name_9));
+        orders.add(new SongsOrder(R.drawable.anime, R.string.anime_name_10));
+        orders.add(new SongsOrder(R.drawable.anime, R.string.anime_name_11));
 
         adapter = new Items_Adapter(this, orders);
 
@@ -70,7 +65,6 @@ public class Anime extends AppCompatActivity implements SearchView.OnQueryTextLi
                 listView.getItemAtPosition(position);
                 myIntent = new Intent(Anime.this, Music_listen.class);
                 startActivity(myIntent);
-
             }
         });
     }
@@ -83,7 +77,6 @@ public class Anime extends AppCompatActivity implements SearchView.OnQueryTextLi
         search = (SearchView) MenuItemCompat.getActionView(menu.findItem(R.id.action_search));
         search.setOnQueryTextListener(this);
         return super.onCreateOptionsMenu(menu);
-
     }
 
     @Override
